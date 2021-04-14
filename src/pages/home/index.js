@@ -1,4 +1,5 @@
 import React from 'react';
+import InputRadio from '../../components/InputRadio';
 import photoExample01 from '../../img/boa-foto-01.jpg';
 import photoExample03 from '../../img/boa-foto-03.jpg';
 
@@ -52,9 +53,43 @@ export default function Home() {
 
         <section id='section-quiz-01' className='section-base centered'>
           <p className='default-text'>1. Que tipo de vermelho mais combina com você?</p>
-          <button className='button-base'>Aberto e alegre</button>
-          <button className='button-base'>Clássico e atemporal</button>
-          <button className='button-base'>Arroxeado e vibrante</button>
+          <InputRadio
+            inputClass='input-radio'
+            inputId='red-intensidade'
+            inputName='type-of-red'
+            inputRequired
+            inputValue=''
+            inputChecked=''
+            inputOnChange=''
+            labelHtmlFor='red-intensidade'
+            labelClass='button-base'
+            labelText='Aberto e alegre'
+          />
+          <InputRadio
+            inputClass='input-radio'
+            inputId='red-entusiasmo'
+            inputName='type-of-red'
+            inputRequired
+            inputValue=''
+            inputChecked=''
+            inputOnChange=''
+            labelHtmlFor='red-entusiasmo'
+            labelClass='button-base'
+            labelText='Arroxeado e vibrante'
+          />
+          <InputRadio
+            inputClass='input-radio'
+            inputId='red-energia'
+            inputName='type-of-red'
+            inputRequired
+            inputValue=''
+            inputChecked=''
+            inputOnChange=''
+            labelHtmlFor='red-energia'
+            labelClass='button-base'
+            labelText='Clássico e atemporal'
+          />
+
         </section>
 
         <section id='section-manifesto' className='section-base centered'>
