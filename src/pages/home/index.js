@@ -251,12 +251,41 @@ export default function Home() {
         </section>
 
         <section id='section-manifesto' className='section-manifesto section-base centered'>
+          <article className='manifesto-text'>
+            <p>Espalhe a força do vermelho.</p>
+            <p>Esse vermelho é todo seu.</p>
+            <p>E quanto mais seu,</p>
+            <p>cada vez mais nosso.</p>
+          </article>
+          <NavButton
+            buttonLink='#section-reveal'
+            buttonClass='nav-button red-color'
+            buttonTextClass='nav-button-text'
+            buttonText={`Descubra o \n seu vermelho`}
+            iconClass='icon-arrow-down fas fa-chevron-down'
+          />
         </section>
 
         <section id='section-reveal' className='section-base centered'>
+          <img src='' alt='Foto revelação'></img>
+          <NavButton
+            buttonLink='#section-lipstick'
+            buttonClass='nav-button'
+            buttonTextClass='nav-button-text'
+            buttonText='Próximo'
+            iconClass='icon-arrow-down fas fa-chevron-down'
+          />
         </section>
 
         <section id='section-lipstick' className='section-base centered'>
+          <img src='' alt='Batom'></img>
+          <NavButton
+            buttonLink='#section-lipstick'
+            buttonClass='nav-button'
+            buttonTextClass='nav-button-text'
+            buttonText='Veja o tutorial'
+            iconClass='icon-arrow-down fas fa-chevron-down'
+          />
         </section>
       </main>
     </>

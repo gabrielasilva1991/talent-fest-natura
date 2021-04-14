@@ -59,6 +59,10 @@ input {
   text-align: center;
 }
 
+.red-color {
+  color: #881212;
+}
+
 /* HEADER */
 .header {
   height: 100vh;
@@ -130,4 +134,16 @@ input {
   border: solid 1px #f2e6d0;
   background-color: #881212;
   color: #f2e6d0;
+}
+
+
+/* MANIFESTO */
+.section-manifesto {
+  background-color: #f1ede5;
+}
+
+.manifesto-text {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #AD1F23;
 }
