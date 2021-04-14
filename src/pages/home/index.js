@@ -54,39 +54,39 @@ export default function Home() {
         <section id='section-quiz-01' className='section-base centered'>
           <p className='default-text'>1. Que tipo de vermelho mais combina com você?</p>
           <InputRadio
-            inputClass='input-radio'
-            inputId='red-intensidade'
+            inputClass='input-radio input-answer'
+            inputId='light'
             inputName='type-of-red'
             inputRequired
-            inputValue=''
-            inputChecked=''
-            inputOnChange=''
-            labelHtmlFor='red-intensidade'
-            labelClass='button-base'
+            // inputValue=''
+            // inputChecked=''
+            // inputOnChange=''
+            labelHtmlFor='light'
+            labelClass='label-answer button-base'
             labelText='Aberto e alegre'
           />
           <InputRadio
-            inputClass='input-radio'
-            inputId='red-entusiasmo'
+            inputClass='input-radio input-answer'
+            inputId='purple'
             inputName='type-of-red'
             inputRequired
-            inputValue=''
-            inputChecked=''
-            inputOnChange=''
-            labelHtmlFor='red-entusiasmo'
-            labelClass='button-base'
+            // inputValue=''
+            // inputChecked=''
+            // inputOnChange=''
+            labelHtmlFor='purple'
+            labelClass='label-answer button-base'
             labelText='Arroxeado e vibrante'
           />
           <InputRadio
-            inputClass='input-radio'
-            inputId='red-energia'
+            inputClass='input-radio input-answer'
+            inputId='classic'
             inputName='type-of-red'
             inputRequired
-            inputValue=''
-            inputChecked=''
-            inputOnChange=''
-            labelHtmlFor='red-energia'
-            labelClass='button-base'
+            // inputValue=''
+            // inputChecked=''
+            // inputOnChange=''
+            labelHtmlFor='classic'
+            labelClass='label-answer button-base'
             labelText='Clássico e atemporal'
           />
         </section>
@@ -94,68 +94,108 @@ export default function Home() {
         <section id='section-quiz-02' className='section-base centered'>
           <p className='default-text'>2. Quais as cores predominantes no seu guarda-roupa?</p>
           <InputRadio
-            inputClass='input-radio'
-            inputId='red-entusiasmo'
+            inputClass='input-radio input-answer'
+            inputId='cold'
             inputName='wardrobe-colors'
             inputRequired
-            inputValue=''
-            inputChecked=''
-            inputOnChange=''
-            labelHtmlFor='red-intensidade'
-            labelClass='button-base'
+            // inputValue=''
+            // inputChecked=''
+            // inputOnChange=''
+            labelHtmlFor='cold'
+            labelClass='label-answer button-base'
             labelText='Tons frios, como azuis e cinzas'
           />
           <InputRadio
-            inputClass='input-radio'
-            inputId='red-intensidade'
+            inputClass='input-radio input-answer'
+            inputId='warm'
             inputName='wardrobe-colors'
             inputRequired
-            inputValue=''
-            inputChecked=''
-            inputOnChange=''
-            labelHtmlFor='red-entusiasmo'
-            labelClass='button-base'
+            // inputValue=''
+            // inputChecked=''
+            // inputOnChange=''
+            labelHtmlFor='warm'
+            labelClass='label-answer button-base'
             labelText='Tons quentes, como amarelos e laranjas'
           />
           <InputRadio
-            inputClass='input-radio'
-            inputId='red-energia'
+            inputClass='input-radio input-answer'
+            inputId='strong'
             inputName='wardrobe-colors'
             inputRequired
-            inputValue=''
-            inputChecked=''
-            inputOnChange=''
-            labelHtmlFor='red-energia'
-            labelClass='button-base'
+            // inputValue=''
+            // inputChecked=''
+            // inputOnChange=''
+            labelHtmlFor='strong'
+            labelClass='label-answer button-base'
             labelText='Não importa a cor, desde que seja forte'
           />
         </section>
 
-        <section id='section-quiz-02' className='section-base centered'>
+        <section id='section-quiz-03' className='section-base centered'>
           <p className='default-text'>3. Quando você toma sol, <br/>sua pele fica</p>
           <InputRadio
-            inputClass='input-radio'
-            inputId='red-entusiasmo'
-            inputName='skin-undertone'
+            inputClass='input-radio input-answer'
+            inputId='burned'
+            inputName='skin-sensitivity'
             inputRequired
-            inputValue=''
-            inputChecked=''
-            inputOnChange=''
-            labelHtmlFor='red-intensidade'
-            labelClass='button-base'
+            // inputValue=''
+            // inputChecked=''
+            // inputOnChange=''
+            labelHtmlFor='burned'
+            labelClass='label-answer button-base'
             labelText='Vermelha'
           />
           <InputRadio
-            inputClass='input-radio'
-            inputId='red-intensidade'
-            inputName='skin-undertone'
+            inputClass='input-radio input-answer'
+            inputId='bronzed'
+            inputName='skin-sensitivity'
             inputRequired
-            inputValue=''
-            inputChecked=''
-            inputOnChange=''
-            labelHtmlFor='red-entusiasmo'
-            labelClass='button-base'
+            // inputValue=''
+            // inputChecked=''
+            // inputOnChange=''
+            labelHtmlFor='bronzed'
+            labelClass='label-answer button-base'
             labelText='Bronzeada'
+          />
+        </section>
+
+        <section id='section-quiz-04' className='section-base centered'>
+          <p className='default-text'>4. Qual sua maior dificuldade ao usar um batom chamativo?</p>
+          <InputRadio
+            inputClass='input-radio input-answer'
+            inputId='thin-lips'
+            inputName='makeup-difficulty'
+            inputRequired
+            // inputValue=''
+            // inputChecked=''
+            // inputOnChange=''
+            labelHtmlFor='thin-lips'
+            labelClass='label-answer button-base'
+            labelText='Tenho lábios finos'
+          />
+          <InputRadio
+            inputClass='input-radio input-answer'
+            inputId='smudged-lipstick'
+            inputName='makeup-difficulty'
+            inputRequired
+            // inputValue=''
+            // inputChecked=''
+            // inputOnChange=''
+            labelHtmlFor='smudged-lipstick'
+            labelClass='label-answer button-base'
+            labelText='Borra com facilidade'
+          />
+          <InputRadio
+            inputClass='input-radio input-answer'
+            inputId='mild-color'
+            inputName='makeup-difficulty'
+            inputRequired
+            // inputValue=''
+            // inputChecked=''
+            // inputOnChange=''
+            labelHtmlFor='mild-color'
+            labelClass='label-answer button-base'
+            labelText='A cor não fica intensa'
           />
         </section>
 

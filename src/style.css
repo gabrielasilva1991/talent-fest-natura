@@ -122,3 +122,11 @@ input {
 }
 
 /* UPLOAD PHOTO */
+
+
+/* QUIZ */
+.input-answer:checked + .label-answer {
+  border: solid 1px #f2e6d0;
+  background-color: #881212;
+  color: #f2e6d0;
+}
