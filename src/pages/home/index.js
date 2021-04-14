@@ -89,7 +89,46 @@ export default function Home() {
             labelClass='button-base'
             labelText='Clássico e atemporal'
           />
+        </section>
 
+        <section id='section-quiz-02' className='section-base centered'>
+          <p className='default-text'>2. Quais as cores predominantes no seu guarda-roupa?</p>
+          <InputRadio
+            inputClass='input-radio'
+            inputId='red-entusiasmo'
+            inputName='wardrobe-colors'
+            inputRequired
+            inputValue=''
+            inputChecked=''
+            inputOnChange=''
+            labelHtmlFor='red-intensidade'
+            labelClass='button-base'
+            labelText='Tons frios, como azuis e cinzas'
+          />
+          <InputRadio
+            inputClass='input-radio'
+            inputId='red-intensidade'
+            inputName='wardrobe-colors'
+            inputRequired
+            inputValue=''
+            inputChecked=''
+            inputOnChange=''
+            labelHtmlFor='red-entusiasmo'
+            labelClass='button-base'
+            labelText='Tons quentes, como amarelos e laranjas'
+          />
+          <InputRadio
+            inputClass='input-radio'
+            inputId='red-energia'
+            inputName='wardrobe-colors'
+            inputRequired
+            inputValue=''
+            inputChecked=''
+            inputOnChange=''
+            labelHtmlFor='red-energia'
+            labelClass='button-base'
+            labelText='Não importa a cor, desde que seja forte'
+          />
         </section>
 
         <section id='section-manifesto' className='section-base centered'>
