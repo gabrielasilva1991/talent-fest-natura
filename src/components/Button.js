@@ -1,15 +1,21 @@
 import React from 'react';
 
-export default function NavButton({
+export default function Button({
   buttonLink,
+  buttonType,
   buttonClass,
+  buttonOnClick,
   buttonTextClass,
   buttonText,
   iconClass,
 }) {
   return (
     <a href={buttonLink}>
-      <button className={buttonClass}>
+      <button
+        type={buttonType}
+        className={buttonClass}
+        onClick={buttonOnClick}
+      >
         <p className={buttonTextClass}>{buttonText}</p>
         <i className={iconClass}></i>
       </button>
