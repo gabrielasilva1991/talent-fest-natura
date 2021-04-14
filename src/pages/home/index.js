@@ -131,6 +131,34 @@ export default function Home() {
           />
         </section>
 
+        <section id='section-quiz-02' className='section-base centered'>
+          <p className='default-text'>3. Quando você toma sol, <br/>sua pele fica</p>
+          <InputRadio
+            inputClass='input-radio'
+            inputId='red-entusiasmo'
+            inputName='skin-undertone'
+            inputRequired
+            inputValue=''
+            inputChecked=''
+            inputOnChange=''
+            labelHtmlFor='red-intensidade'
+            labelClass='button-base'
+            labelText='Vermelha'
+          />
+          <InputRadio
+            inputClass='input-radio'
+            inputId='red-intensidade'
+            inputName='skin-undertone'
+            inputRequired
+            inputValue=''
+            inputChecked=''
+            inputOnChange=''
+            labelHtmlFor='red-entusiasmo'
+            labelClass='button-base'
+            labelText='Bronzeada'
+          />
+        </section>
+
         <section id='section-manifesto' className='section-base centered'>
         </section>
 
