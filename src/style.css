@@ -1,6 +1,6 @@
 /* FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Meddon&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Meddon&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yantramanav:wght@100;300;400;500;700;900&display=swap");
 
 /* CSS RESET */
 * {
@@ -11,15 +11,107 @@
 
 /* GENERAL STYLING */
 html {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
+  scroll-behavior: smooth;
+  font-family: "Yantramanav", sans-serif;
+  font-weight: 300;
 }
 
 body {
   background-color: #881212;
-  color: #F2E6D0;
+  color: #f2e6d0;
+  cursor: default;
 }
 
 a {
   text-decoration: none;
 }
+
+h1 {
+  font-weight: 300;
+}
+
+button,
+input {
+  font-family: "Yantramanav", sans-serif;
+  border: none;
+  color: #f2e6d0;
+  cursor: pointer;
+}
+
+.button-base {
+  padding: 0.3rem 0.7rem;
+  background-color: #f2e6d0;
+  color: #881212;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.09rem;
+  text-transform: uppercase;
+}
+
+.centered {
+  text-align: center;
+}
+
+/* HEADER */
+.header {
+  height: 100vh;
+  padding: 10vh 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.find-your-red {
+  margin-top: 10vh;
+}
+
+.handwritten-font {
+  font-family: "Meddon";
+  font-size: 3rem;
+  line-height: 4.3rem;
+}
+
+.nav-button {
+  background: none;
+}
+
+.nav-button-text {
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.08rem;
+}
+
+.icon-arrow-down {
+  font-size: 3rem;
+}
+
+/* ---- SECTIONS ---- */
+/* GENERAL */
+.section-base {
+  height: 100vh;
+  padding: 10vh 4vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* GET USER NAME */
+.input-username {
+  border-bottom: solid 1px #f2e6d0;
+  background: none;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.default-text {
+  font-size: 1.3rem;
+}
+
+.photo-example {
+  width: 40vw;
+  height: auto;
+}
+
+/* UPLOAD PHOTO */
