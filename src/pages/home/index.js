@@ -9,118 +9,92 @@ import batomEnergia from '../../img/batom-energia.jpg';
 
 export default function Home() {
   const questionOne = { 
-    answerOne : 'Aberto e Alegre',
-    answerTwo : 'Clássico e Atemporal',
-    answerThree : 'Arroxeado e Vibrante',
+    answerOne : '5',
+    answerTwo : '10',
+    answerThree : '15',
   }
 
   const questionTwo = { 
-    answerOne : ' Tons quentes como, amarelos e laranjas',
-    answerTwo : ' Tons frios, como azuis e cinzas',
-    answerThree : 'Não importa a cor, desde que seja forte',
+    answerOne : '5',
+    answerTwo : '10',
+    answerThree : '15',
   }
 
   const questionThree = { 
-    answerOne : 'Vermelha',
-    answerTwo : 'Bronzeada',
+    answerOne : '5',
+    answerTwo : '10',
   }
 
   const questionFour = { 
-    answerOne : 'Tenho lábios finos',
-    answerTwo : 'Borra com facilidade',
-    answerThree : 'A cor não fica intensa'
+    answerOne : '5',
+    answerTwo : '10',
+    answerThree : '15'
   }
 
-  const [questionOneResponseOne, setQuestionOneResponseOne] = useState(''); 
-  const [questionOneResponseTwo, setQuestionOneResponseTwo] = useState(''); 
-  const [questionOneResponseThree, setQuestionOneResponseThree] = useState('');
+  const [allResponses, setAllResponses] = useState('');
 
   const handleResponseOne = () => {
-    setQuestionOneResponseOne(questionOne.answerOne);
+    setAllResponses([...allResponses, Number(questionOne.answerOne)]);
   };
 
-  console.log(questionOneResponseOne)
+  console.log(allResponses)
 
   const handleResponseTwo = () => {
-    setQuestionOneResponseTwo(questionOne.answerTwo);
+    setAllResponses([...allResponses, Number(questionOne.answerTwo)]);
   };
-
-  console.log(questionOneResponseTwo)
   
   const handleResponseThree = () => {
-    setQuestionOneResponseThree(questionOne.answerThree);
+    setAllResponses([...allResponses, Number(questionOne.answerThree)]);
   };
 
-  console.log(questionOneResponseThree)
-
-
-
-
-  const [questionTwoResponseOne, setQuestionTwoResponseOne] = useState(''); 
-  const [questionTwoResponseTwo, setQuestionTwoResponseTwo] = useState(''); 
-  const [questionTwoResponseThree, setQuestionTwoResponseThree] = useState('');
 
   const handleOneResponse = () => {
-    setQuestionTwoResponseOne(questionTwo.answerOne);
+    setAllResponses([...allResponses, Number(questionTwo.answerOne)]);
   };
-
-  console.log(questionTwoResponseOne)
 
   const handleTwoResponse = () => {
-    setQuestionTwoResponseTwo(questionTwo.answerTwo);
+    setAllResponses([...allResponses, Number(questionTwo.answerTwo)]);
   };
-
-  console.log(questionTwoResponseTwo)
-  
-  const handleThreeResponse = () => {
-    setQuestionTwoResponseThree(questionTwo.answerThree);
-  };
-
-  console.log(questionTwoResponseThree)
-
-
-
-
-  const [questionThreeResponseOne, setQuestionThreeResponseOne] = useState(''); 
-  const [questionThreeResponseTwo, setQuestionThreeResponseTwo] = useState(''); 
  
-  const oneHandleResponse = () => {
-    setQuestionThreeResponseOne(questionThree.answerOne);
+  const handleThreeResponse = () => {
+    setAllResponses([...allResponses, Number(questionTwo.answerThree)]);
   };
 
-  console.log(questionThreeResponseOne)
+
+  const oneHandleResponse = () => {
+    setAllResponses([...allResponses, Number(questionThree.answerOne)]);
+  };
 
   const twoHandleResponse = () => {
-    setQuestionThreeResponseTwo(questionThree.answerTwo);
+    setAllResponses([...allResponses, Number(questionThree.answerTwo)]);
   };
 
-  console.log(questionThreeResponseTwo)
-
-
-
-  const [questionFourResponseOne, setQuestionFourResponseOne] = useState(''); 
-  const [questionFourResponseTwo, setQuestionFourResponseTwo] = useState(''); 
-  const [questionFourResponseThree, setQuestionFourResponseThree] = useState('');
 
   const handleOneResponseFour = () => {
-    setQuestionFourResponseOne(questionFour.answerOne);
+    setAllResponses([...allResponses, Number(questionFour.answerOne)]);
   };
-
-  console.log(questionFourResponseOne)
 
   const handleTwoResponseFour = () => {
-    setQuestionFourResponseTwo(questionFour.answerTwo);
+    setAllResponses([...allResponses, Number(questionFour.answerTwo)]);
   };
-
-  console.log(questionFourResponseTwo)
   
   const handleThreeResponseFour = () => {
-    setQuestionFourResponseThree(questionFour.answerThree);
+    setAllResponses([...allResponses, Number(questionFour.answerThree)]);
   };
 
-  console.log(questionFourResponseThree)
-  
 
+  function Somar(allResponses, number) {
+    var total = 0;
+    for (var i = 0; i < allResponses.length; i++) {
+        if (allResponses[i] >= number) {
+            total += allResponses[i];
+        }
+    }
+    return total;
+  }
+  console.log(Somar(allResponses, 2));
+
+  
   return (
     <>
       <header className='header centered'>
@@ -165,7 +139,7 @@ export default function Home() {
             inputId='light'
             inputName='type-of-red'
             inputRequired
-            inputValue={questionOneResponseOne}
+            inputValue={allResponses}
             // inputChecked=''
             inputOnChange={handleResponseOne}
             labelHtmlFor='light'
@@ -177,7 +151,7 @@ export default function Home() {
             inputId='purple'
             inputName='type-of-red'
             inputRequired
-            inputValue={questionOneResponseThree}
+            inputValue={allResponses}
             // inputChecked=''
             inputOnChange={handleResponseThree}
             labelHtmlFor='purple'
@@ -189,7 +163,7 @@ export default function Home() {
             inputId='classic'
             inputName='type-of-red'
             inputRequired
-            inputValue={questionOneResponseTwo}
+            inputValue={allResponses}
             // inputChecked=''
             inputOnChange={handleResponseTwo}
             labelHtmlFor='classic'
@@ -212,7 +186,7 @@ export default function Home() {
             inputId='cold'
             inputName='wardrobe-colors'
             inputRequired
-            inputValue={questionTwoResponseTwo}
+            inputValue={allResponses}
             // inputChecked=''
             inputOnChange={handleTwoResponse}
             labelHtmlFor='cold'
@@ -224,7 +198,7 @@ export default function Home() {
             inputId='warm'
             inputName='wardrobe-colors'
             inputRequired
-            inputValue={questionTwoResponseOne}
+            inputValue={allResponses}
             // inputChecked=''
             inputOnChange={handleOneResponse}
             labelHtmlFor='warm'
@@ -236,7 +210,7 @@ export default function Home() {
             inputId='strong'
             inputName='wardrobe-colors'
             inputRequired
-            inputValue={questionTwoResponseThree}
+            inputValue={allResponses}
             // inputChecked=''
             inputOnChange={handleThreeResponse}
             labelHtmlFor='strong'
@@ -259,7 +233,7 @@ export default function Home() {
             inputId='burned'
             inputName='skin-sensitivity'
             inputRequired
-            inputValue={questionThreeResponseOne}
+            inputValue={allResponses}
             // inputChecked=''
             inputOnChange={oneHandleResponse}
             labelHtmlFor='burned'
@@ -271,7 +245,7 @@ export default function Home() {
             inputId='bronzed'
             inputName='skin-sensitivity'
             inputRequired
-            inputValue={questionThreeResponseTwo}
+            inputValue={allResponses}
             // inputChecked=''
             inputOnChange={twoHandleResponse}
             labelHtmlFor='bronzed'
@@ -294,7 +268,7 @@ export default function Home() {
             inputId='thin-lips'
             inputName='makeup-difficulty'
             inputRequired
-            inputValue={questionFourResponseOne}
+            inputValue={allResponses}
             // inputChecked=''
             inputOnChange={handleOneResponseFour}
             labelHtmlFor='thin-lips'
@@ -306,7 +280,7 @@ export default function Home() {
             inputId='smudged-lipstick'
             inputName='makeup-difficulty'
             inputRequired
-            inputValue={questionFourResponseTwo}
+            inputValue={allResponses}
             // inputChecked=''
             inputOnChange={handleTwoResponseFour}
             labelHtmlFor='smudged-lipstick'
@@ -318,7 +292,7 @@ export default function Home() {
             inputId='mild-color'
             inputName='makeup-difficulty'
             inputRequired
-            inputValue={questionFourResponseThree}
+            inputValue={allResponses}
             // inputChecked=''
             inputOnChange={handleThreeResponseFour}
             labelHtmlFor='mild-color'
@@ -352,7 +326,7 @@ export default function Home() {
 
         <section id='section-lipstick' className='section-base section-lipstick centered'>
           <div className='your-red'>
-            <p className=''>Cliente,<br />seu vermelho é o</p>
+            <p className=''>Cliente,<br />seu vermelho é o </p>
             <p className='your-red-handwritten'>energia</p>
           </div>
           <img className='lipstick-img' src={batomEnergia} alt='Batom Energia'></img>
