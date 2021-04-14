@@ -1,13 +1,126 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from '../../components/Button';
 import InputRadio from '../../components/InputRadio';
-import photoExample01 from '../../img/boa-foto-01.jpg';
-import photoExample03 from '../../img/boa-foto-03.jpg';
+// import photoExample01 from '../../img/boa-foto-01.jpg';
+// import photoExample03 from '../../img/boa-foto-03.jpg';
 import batomEnergia from '../../img/batom-energia.jpg';
-import batomIntensidade from '../../img/batom-intensidade.jpg';
-import batomEntusiasmo from '../../img/batom-entusiasmo.jpg';
+// import batomIntensidade from '../../img/batom-intensidade.jpg';
+// import batomEntusiasmo from '../../img/batom-entusiasmo.jpg';
 
 export default function Home() {
+  const questionOne = { 
+    answerOne : 'Aberto e Alegre',
+    answerTwo : 'Clássico e Atemporal',
+    answerThree : 'Arroxeado e Vibrante',
+  }
+
+  const questionTwo = { 
+    answerOne : ' Tons quentes como, amarelos e laranjas',
+    answerTwo : ' Tons frios, como azuis e cinzas',
+    answerThree : 'Não importa a cor, desde que seja forte',
+  }
+
+  const questionThree = { 
+    answerOne : 'Vermelha',
+    answerTwo : 'Bronzeada',
+  }
+
+  const questionFour = { 
+    answerOne : 'Tenho lábios finos',
+    answerTwo : 'Borra com facilidade',
+    answerThree : 'A cor não fica intensa'
+  }
+
+  const [questionOneResponseOne, setQuestionOneResponseOne] = useState(''); 
+  const [questionOneResponseTwo, setQuestionOneResponseTwo] = useState(''); 
+  const [questionOneResponseThree, setQuestionOneResponseThree] = useState('');
+
+  const handleResponseOne = () => {
+    setQuestionOneResponseOne(questionOne.answerOne);
+  };
+
+  console.log(questionOneResponseOne)
+
+  const handleResponseTwo = () => {
+    setQuestionOneResponseTwo(questionOne.answerTwo);
+  };
+
+  console.log(questionOneResponseTwo)
+  
+  const handleResponseThree = () => {
+    setQuestionOneResponseThree(questionOne.answerThree);
+  };
+
+  console.log(questionOneResponseThree)
+
+
+
+
+  const [questionTwoResponseOne, setQuestionTwoResponseOne] = useState(''); 
+  const [questionTwoResponseTwo, setQuestionTwoResponseTwo] = useState(''); 
+  const [questionTwoResponseThree, setQuestionTwoResponseThree] = useState('');
+
+  const handleOneResponse = () => {
+    setQuestionTwoResponseOne(questionTwo.answerOne);
+  };
+
+  console.log(questionTwoResponseOne)
+
+  const handleTwoResponse = () => {
+    setQuestionTwoResponseTwo(questionTwo.answerTwo);
+  };
+
+  console.log(questionTwoResponseTwo)
+  
+  const handleThreeResponse = () => {
+    setQuestionTwoResponseThree(questionTwo.answerThree);
+  };
+
+  console.log(questionTwoResponseThree)
+
+
+
+
+  const [questionThreeResponseOne, setQuestionThreeResponseOne] = useState(''); 
+  const [questionThreeResponseTwo, setQuestionThreeResponseTwo] = useState(''); 
+ 
+  const oneHandleResponse = () => {
+    setQuestionThreeResponseOne(questionThree.answerOne);
+  };
+
+  console.log(questionThreeResponseOne)
+
+  const twoHandleResponse = () => {
+    setQuestionThreeResponseTwo(questionThree.answerTwo);
+  };
+
+  console.log(questionThreeResponseTwo)
+
+
+
+  const [questionFourResponseOne, setQuestionFourResponseOne] = useState(''); 
+  const [questionFourResponseTwo, setQuestionFourResponseTwo] = useState(''); 
+  const [questionFourResponseThree, setQuestionFourResponseThree] = useState('');
+
+  const handleOneResponseFour = () => {
+    setQuestionFourResponseOne(questionFour.answerOne);
+  };
+
+  console.log(questionFourResponseOne)
+
+  const handleTwoResponseFour = () => {
+    setQuestionFourResponseTwo(questionFour.answerTwo);
+  };
+
+  console.log(questionFourResponseTwo)
+  
+  const handleThreeResponseFour = () => {
+    setQuestionFourResponseThree(questionFour.answerThree);
+  };
+
+  console.log(questionFourResponseThree)
+  
+
   return (
     <>
       <header className='header centered'>
@@ -52,9 +165,9 @@ export default function Home() {
             inputId='light'
             inputName='type-of-red'
             inputRequired
-            // inputValue=''
+            inputValue={questionOneResponseOne}
             // inputChecked=''
-            // inputOnChange=''
+            inputOnChange={handleResponseOne}
             labelHtmlFor='light'
             labelClass='label-answer button-base'
             labelText='Aberto e alegre'
@@ -64,9 +177,9 @@ export default function Home() {
             inputId='purple'
             inputName='type-of-red'
             inputRequired
-            // inputValue=''
+            inputValue={questionOneResponseThree}
             // inputChecked=''
-            // inputOnChange=''
+            inputOnChange={handleResponseThree}
             labelHtmlFor='purple'
             labelClass='label-answer button-base'
             labelText='Arroxeado e vibrante'
@@ -76,9 +189,9 @@ export default function Home() {
             inputId='classic'
             inputName='type-of-red'
             inputRequired
-            // inputValue=''
+            inputValue={questionOneResponseTwo}
             // inputChecked=''
-            // inputOnChange=''
+            inputOnChange={handleResponseTwo}
             labelHtmlFor='classic'
             labelClass='label-answer button-base'
             labelText='Clássico e atemporal'
@@ -99,9 +212,9 @@ export default function Home() {
             inputId='cold'
             inputName='wardrobe-colors'
             inputRequired
-            // inputValue=''
+            inputValue={questionTwoResponseTwo}
             // inputChecked=''
-            // inputOnChange=''
+            inputOnChange={handleTwoResponse}
             labelHtmlFor='cold'
             labelClass='label-answer button-base'
             labelText='Tons frios, como azuis e cinzas'
@@ -111,9 +224,9 @@ export default function Home() {
             inputId='warm'
             inputName='wardrobe-colors'
             inputRequired
-            // inputValue=''
+            inputValue={questionTwoResponseOne}
             // inputChecked=''
-            // inputOnChange=''
+            inputOnChange={handleOneResponse}
             labelHtmlFor='warm'
             labelClass='label-answer button-base'
             labelText='Tons quentes, como amarelos e laranjas'
@@ -123,9 +236,9 @@ export default function Home() {
             inputId='strong'
             inputName='wardrobe-colors'
             inputRequired
-            // inputValue=''
+            inputValue={questionTwoResponseThree}
             // inputChecked=''
-            // inputOnChange=''
+            inputOnChange={handleThreeResponse}
             labelHtmlFor='strong'
             labelClass='label-answer button-base'
             labelText='Não importa a cor, desde que seja forte'
@@ -146,9 +259,9 @@ export default function Home() {
             inputId='burned'
             inputName='skin-sensitivity'
             inputRequired
-            // inputValue=''
+            inputValue={questionThreeResponseOne}
             // inputChecked=''
-            // inputOnChange=''
+            inputOnChange={oneHandleResponse}
             labelHtmlFor='burned'
             labelClass='label-answer button-base'
             labelText='Vermelha'
@@ -158,9 +271,9 @@ export default function Home() {
             inputId='bronzed'
             inputName='skin-sensitivity'
             inputRequired
-            // inputValue=''
+            inputValue={questionThreeResponseTwo}
             // inputChecked=''
-            // inputOnChange=''
+            inputOnChange={twoHandleResponse}
             labelHtmlFor='bronzed'
             labelClass='label-answer button-base'
             labelText='Bronzeada'
@@ -181,9 +294,9 @@ export default function Home() {
             inputId='thin-lips'
             inputName='makeup-difficulty'
             inputRequired
-            // inputValue=''
+            inputValue={questionFourResponseOne}
             // inputChecked=''
-            // inputOnChange=''
+            inputOnChange={handleOneResponseFour}
             labelHtmlFor='thin-lips'
             labelClass='label-answer button-base'
             labelText='Tenho lábios finos'
@@ -193,9 +306,9 @@ export default function Home() {
             inputId='smudged-lipstick'
             inputName='makeup-difficulty'
             inputRequired
-            // inputValue=''
+            inputValue={questionFourResponseTwo}
             // inputChecked=''
-            // inputOnChange=''
+            inputOnChange={handleTwoResponseFour}
             labelHtmlFor='smudged-lipstick'
             labelClass='label-answer button-base'
             labelText='Borra com facilidade'
@@ -205,9 +318,9 @@ export default function Home() {
             inputId='mild-color'
             inputName='makeup-difficulty'
             inputRequired
-            // inputValue=''
+            inputValue={questionFourResponseThree}
             // inputChecked=''
-            // inputOnChange=''
+            inputOnChange={handleThreeResponseFour}
             labelHtmlFor='mild-color'
             labelClass='label-answer button-base'
             labelText='A cor não fica intensa'
