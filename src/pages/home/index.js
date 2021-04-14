@@ -1,8 +1,11 @@
 import React from 'react';
-import NavButton from '../../components/NavButton';
+import Button from '../../components/Button';
 import InputRadio from '../../components/InputRadio';
 import photoExample01 from '../../img/boa-foto-01.jpg';
 import photoExample03 from '../../img/boa-foto-03.jpg';
+import batomEnergia from '../../img/batom-energia.jpg';
+import batomIntensidade from '../../img/batom-intensidade.jpg';
+import batomEntusiasmo from '../../img/batom-entusiasmo.jpg';
 
 export default function Home() {
   return (
@@ -12,24 +15,19 @@ export default function Home() {
           <span className='handwritten-font'>seu vermelho</span>
         </h1>
 
-        <NavButton
+        <Button
           buttonLink='#section-name'
           buttonClass='nav-button'
           buttonTextClass='nav-button-text'
           buttonText='Próximo'
           iconClass='icon-arrow-down fas fa-chevron-down'
         />
-        {/* <a href='#section-name'>
-          <button className='nav-button'>
-            <p className='nav-button-text'>Próximo</p>
-            <i className='icon-arrow-down fas fa-chevron-down'></i>
-          </button>
-        </a> */}
       </header>
 
       <main>
         <section id='section-name' className='section-base centered'>
-          <label className='default-text'>Insira seu nome
+          <div>
+            <label className='default-text'>Insira seu nome</label>
             <input
               required
               type='text'
@@ -37,36 +35,9 @@ export default function Home() {
               size='10'
               className='input-username centered'
             />
-          </label>
-          <NavButton
-            buttonLink='#section-photo'
-            buttonClass='nav-button'
-            buttonTextClass='nav-button-text'
-            buttonText='Próximo'
-            iconClass='icon-arrow-down fas fa-chevron-down'
-          />
-        </section>
-
-        <section id='section-photo' className='section-photo section-base centered'>
-          <p>Faça o upload de uma foto sua.</p>
-          <p>É importante que a foto mostre todo o seu rosto e ocupe a maior parte da imagem.</p>
-          <p>Exemplos:</p>
-          <div className='photo-examples-wrap'>
-            <img
-              src={photoExample01}
-              alt='Rosto de uma mulher caucasiana, loira, sorrindo e olhando para a câmera.'
-              className='photo-example'
-            ></img>
-            <img
-              src={photoExample03}
-              alt='Rosto de uma mulher negra, sorrindo e olhando para seu lado esquerdo.'
-              className='photo-example'
-            ></img>
-
           </div>
-          <button className='button-base'>Enviar foto</button>
-          <NavButton
-            buttonLink='#section-quiz-01'
+          <Button
+            buttonLink='#section-photo'
             buttonClass='nav-button'
             buttonTextClass='nav-button-text'
             buttonText='Próximo'
@@ -112,7 +83,7 @@ export default function Home() {
             labelClass='label-answer button-base'
             labelText='Clássico e atemporal'
           />
-          <NavButton
+          <Button
             buttonLink='#section-quiz-02'
             buttonClass='nav-button'
             buttonTextClass='nav-button-text'
@@ -159,7 +130,7 @@ export default function Home() {
             labelClass='label-answer button-base'
             labelText='Não importa a cor, desde que seja forte'
           />
-          <NavButton
+          <Button
             buttonLink='#section-quiz-03'
             buttonClass='nav-button'
             buttonTextClass='nav-button-text'
@@ -194,7 +165,7 @@ export default function Home() {
             labelClass='label-answer button-base'
             labelText='Bronzeada'
           />
-          <NavButton
+          <Button
             buttonLink='#section-quiz-04'
             buttonClass='nav-button'
             buttonTextClass='nav-button-text'
@@ -241,7 +212,7 @@ export default function Home() {
             labelClass='label-answer button-base'
             labelText='A cor não fica intensa'
           />
-          <NavButton
+          <Button
             buttonLink='#section-manifesto'
             buttonClass='nav-button'
             buttonTextClass='nav-button-text'
@@ -257,29 +228,30 @@ export default function Home() {
             <p>E quanto mais seu,</p>
             <p>cada vez mais nosso.</p>
           </article>
-          <NavButton
+          <Button
             buttonLink='#section-reveal'
             buttonClass='nav-button red-color'
             buttonTextClass='nav-button-text'
-            buttonText={`Descubra o \n seu vermelho`}
+            buttonText='Descubra o  seu vermelho'
             iconClass='icon-arrow-down fas fa-chevron-down'
           />
         </section>
 
-        <section id='section-reveal' className='section-base centered'>
-          <img src='' alt='Foto revelação'></img>
-          <NavButton
-            buttonLink='#section-lipstick'
-            buttonClass='nav-button'
-            buttonTextClass='nav-button-text'
-            buttonText='Próximo'
-            iconClass='icon-arrow-down fas fa-chevron-down'
-          />
-        </section>
+        <section id='section-lipstick' className='section-base section-lipstick centered'>
+          <div className='your-red'>
+            <p className=''>Cliente,<br />seu vermelho é o</p>
+            <p className='your-red-handwritten'>energia</p>
+          </div>
+          <img className='lipstick-img' src={batomEnergia} alt='Batom Energia'></img>
 
-        <section id='section-lipstick' className='section-base centered'>
-          <img src='' alt='Batom'></img>
-          <NavButton
+          <Button
+            buttonLink='https://www.natura.com.br/p/batom-marmorizado-natura-una-3,5g/7096?color=Vermelho%20Energia'
+            buttonClass='button-buy'
+            buttonTextClass='button-buy-text'
+            buttonText='Compre agora'
+          />
+
+          <Button
             buttonLink='#section-lipstick'
             buttonClass='nav-button'
             buttonTextClass='nav-button-text'

@@ -147,3 +147,46 @@ input {
   font-weight: bold;
   color: #AD1F23;
 }
+
+
+/* LIPSTICK */
+.section-lipstick {
+  padding: 5vh;
+  background-color: #B12E24;
+}
+
+.lipstick-img {
+  position: relative;
+  left: -15vw;
+  width: 17rem;
+  height: auto;
+  border: solid 2px #f2e6d0;
+  border-radius: 50%;
+  object-fit: none;
+  object-position: center 10%;
+}
+
+.button-buy {
+  background-color: #f2e6d0;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+}
+
+.button-buy-text {
+  color: #881212;
+  text-transform: uppercase;
+}
+
+.your-red {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #f1ede5
+}
+
+.your-red-handwritten {
+  font-family: 'Meddon';
+  font-size: 2.4rem;
+  font-weight: 300;
+  line-height: 1.8rem;
+}
