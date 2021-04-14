@@ -1,4 +1,5 @@
 import React from 'react';
+import NavButton from '../../components/NavButton';
 import InputRadio from '../../components/InputRadio';
 import photoExample01 from '../../img/boa-foto-01.jpg';
 import photoExample03 from '../../img/boa-foto-03.jpg';
@@ -11,29 +12,44 @@ export default function Home() {
           <span className='handwritten-font'>seu vermelho</span>
         </h1>
 
-        <a href='#section-name'>
+        <NavButton
+          buttonLink='#section-name'
+          buttonClass='nav-button'
+          buttonTextClass='nav-button-text'
+          buttonText='Próximo'
+          iconClass='icon-arrow-down fas fa-chevron-down'
+        />
+        {/* <a href='#section-name'>
           <button className='nav-button'>
             <p className='nav-button-text'>Próximo</p>
             <i className='icon-arrow-down fas fa-chevron-down'></i>
           </button>
-        </a>
+        </a> */}
       </header>
 
       <main>
         <section id='section-name' className='section-base centered'>
-          <label className='default-text'>Insira seu nome</label>
-          <input
-            required
-            type='text'
-            minLength='1'
-            size='10'
-            className='input-username centered'
+          <label className='default-text'>Insira seu nome
+            <input
+              required
+              type='text'
+              minLength='1'
+              size='10'
+              className='input-username centered'
+            />
+          </label>
+          <NavButton
+            buttonLink='#section-photo'
+            buttonClass='nav-button'
+            buttonTextClass='nav-button-text'
+            buttonText='Próximo'
+            iconClass='icon-arrow-down fas fa-chevron-down'
           />
         </section>
 
         <section id='section-photo' className='section-photo section-base centered'>
           <p>Faça o upload de uma foto sua.</p>
-          <p>É importante que a foto seja de rosto, com ele ocupando quase toda a imagem.</p>
+          <p>É importante que a foto mostre todo o seu rosto e ocupe a maior parte da imagem.</p>
           <p>Exemplos:</p>
           <div className='photo-examples-wrap'>
             <img
@@ -49,6 +65,13 @@ export default function Home() {
 
           </div>
           <button className='button-base'>Enviar foto</button>
+          <NavButton
+            buttonLink='#section-quiz-01'
+            buttonClass='nav-button'
+            buttonTextClass='nav-button-text'
+            buttonText='Próximo'
+            iconClass='icon-arrow-down fas fa-chevron-down'
+          />
         </section>
 
         <section id='section-quiz-01' className='section-base centered'>
@@ -88,6 +111,13 @@ export default function Home() {
             labelHtmlFor='classic'
             labelClass='label-answer button-base'
             labelText='Clássico e atemporal'
+          />
+          <NavButton
+            buttonLink='#section-quiz-02'
+            buttonClass='nav-button'
+            buttonTextClass='nav-button-text'
+            buttonText='Próximo'
+            iconClass='icon-arrow-down fas fa-chevron-down'
           />
         </section>
 
@@ -129,10 +159,17 @@ export default function Home() {
             labelClass='label-answer button-base'
             labelText='Não importa a cor, desde que seja forte'
           />
+          <NavButton
+            buttonLink='#section-quiz-03'
+            buttonClass='nav-button'
+            buttonTextClass='nav-button-text'
+            buttonText='Próximo'
+            iconClass='icon-arrow-down fas fa-chevron-down'
+          />
         </section>
 
         <section id='section-quiz-03' className='section-base centered'>
-          <p className='default-text'>3. Quando você toma sol, <br/>sua pele fica</p>
+          <p className='default-text'>3. Quando você toma sol, <br />sua pele fica</p>
           <InputRadio
             inputClass='input-radio input-answer'
             inputId='burned'
@@ -156,6 +193,13 @@ export default function Home() {
             labelHtmlFor='bronzed'
             labelClass='label-answer button-base'
             labelText='Bronzeada'
+          />
+          <NavButton
+            buttonLink='#section-quiz-04'
+            buttonClass='nav-button'
+            buttonTextClass='nav-button-text'
+            buttonText='Próximo'
+            iconClass='icon-arrow-down fas fa-chevron-down'
           />
         </section>
 
@@ -197,9 +241,16 @@ export default function Home() {
             labelClass='label-answer button-base'
             labelText='A cor não fica intensa'
           />
+          <NavButton
+            buttonLink='#section-manifesto'
+            buttonClass='nav-button'
+            buttonTextClass='nav-button-text'
+            buttonText='Próximo'
+            iconClass='icon-arrow-down fas fa-chevron-down'
+          />
         </section>
 
-        <section id='section-manifesto' className='section-base centered'>
+        <section id='section-manifesto' className='section-manifesto section-base centered'>
         </section>
 
         <section id='section-reveal' className='section-base centered'>
