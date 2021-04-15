@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import Button from '../../components/Button';
 import InputRadio from '../../components/InputRadio';
-// import photoExample01 from '../../img/boa-foto-01.jpg';
-// import photoExample03 from '../../img/boa-foto-03.jpg';
 import batomEnergia from '../../img/batom-energia.jpg';
 // import batomIntensidade from '../../img/batom-intensidade.jpg';
 // import batomEntusiasmo from '../../img/batom-entusiasmo.jpg';
@@ -47,7 +45,6 @@ export default function Home() {
     setAllResponses([...allResponses, Number(questionOne.answerThree)]);
   };
 
-
   const handleOneResponse = () => {
     setAllResponses([...allResponses, Number(questionTwo.answerOne)]);
   };
@@ -60,7 +57,6 @@ export default function Home() {
     setAllResponses([...allResponses, Number(questionTwo.answerThree)]);
   };
 
-
   const oneHandleResponse = () => {
     setAllResponses([...allResponses, Number(questionThree.answerOne)]);
   };
@@ -68,7 +64,6 @@ export default function Home() {
   const twoHandleResponse = () => {
     setAllResponses([...allResponses, Number(questionThree.answerTwo)]);
   };
-
 
   const handleOneResponseFour = () => {
     setAllResponses([...allResponses, Number(questionFour.answerOne)]);
@@ -81,7 +76,6 @@ export default function Home() {
   const handleThreeResponseFour = () => {
     setAllResponses([...allResponses, Number(questionFour.answerThree)]);
   };
-
 
   function Somar(allResponses, number) {
     var total = 0;
@@ -98,38 +92,51 @@ export default function Home() {
   return (
     <>
       <header className='header centered'>
-        <h1 className='find-your-red'>Descubra o<br />
-          <span className='handwritten-font'>seu vermelho</span>
-        </h1>
+        <div className='header-container'>
+          <h1>Descubra o<br />
+            <span className='handwritten-font'>seu <br />vermelho</span>
+          </h1>
 
-        <Button
-          buttonLink='#section-name'
-          buttonClass='nav-button'
-          buttonTextClass='nav-button-text'
-          buttonText='Próximo'
-          iconClass='icon-arrow-down fas fa-chevron-down'
-        />
-      </header>
-
-      <main>
-        <section id='section-name' className='section-base centered'>
-          <div>
-            <label className='default-text'>Insira seu nome</label>
-            <input
-              required
-              type='text'
-              minLength='1'
-              size='10'
-              className='input-username centered'
-            />
-          </div>
           <Button
-            buttonLink='#section-photo'
+            buttonLink='#section-name'
             buttonClass='nav-button'
             buttonTextClass='nav-button-text'
             buttonText='Próximo'
             iconClass='icon-arrow-down fas fa-chevron-down'
           />
+        </div>
+      </header>
+
+      <main>
+        <section id='section-name' className='section-base centered'>
+          <div className='section-container'>
+              <Button
+                buttonLink='#'
+                buttonClass='nav-button'
+                buttonTextClass='nav-button-text'
+                buttonText='Voltar'
+                iconClass='icon-arrow-up fas fa-chevron-up'
+              />
+
+            <div className='input-name-wrap'>
+              <label className='default-text'>Insira seu nome</label>
+              <input
+                type='text'
+                minLength='1'
+                size='12'
+                className='input-username centered'
+              />
+            </div>
+
+              <Button
+                navType='next'
+                buttonLink='#section-quiz-01'
+                buttonClass='nav-button'
+                buttonTextClass='nav-button-text'
+                buttonText='Próximo'
+                iconClass='icon-arrow-down fas fa-chevron-down'
+              />
+          </div>
         </section>
 
         <section id='section-quiz-01' className='section-base centered'>
