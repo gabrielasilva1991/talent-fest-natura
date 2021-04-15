@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useHistory } from 'react-router';
 import Button from '../../components/Button';
 import batomEnergia from '../../img/batom-energia.jpg';
 import batomIntensidade from '../../img/batom-intensidade.jpg'
@@ -8,6 +9,28 @@ import esmalteEntrega from '../../img/esmalte-entrega.jpg';
 import esmalteSuaVerdade from '../../img/esmalte-sua-verdade.jpg';
 
 export default function Intensidade() {
+  const history = useHistory()
+
+  const one = localStorage.getItem('responseOne')
+  const two = localStorage.getItem('responseTwo')
+  const three = localStorage.getItem('responseThree')
+
+  function response() {
+    if (one) {
+      history.push('/tutorial2')
+    } else if (two) {
+      history.push('/tutorial1')
+    } else if (three) {
+      history.push('/tutorial3')
+    }
+
+    localStorage.clear();
+  }
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <>
       <section id='#' className='section-base section-lipstick centered'>
@@ -57,11 +80,11 @@ export default function Intensidade() {
       <section id='energia' className='section-base section-lipstick centered'>
         <div className='section-container'>
           <Button
-              buttonLink='#'
-              buttonClass='nav-button'
-              buttonTextClass='nav-button-text'
-              iconClass='icon-arrow-up fas fa-chevron-up'
-            />
+            buttonLink='#'
+            buttonClass='nav-button'
+            buttonTextClass='nav-button-text'
+            iconClass='icon-arrow-up fas fa-chevron-up'
+          />
 
           <p className='your-red your-red-handwritten'>energia</p>
 
@@ -104,11 +127,11 @@ export default function Intensidade() {
       <section id='entusiasmo' className='section-base section-lipstick centered'>
         <div className='section-container'>
           <Button
-              buttonLink='#intensidade'
-              buttonClass='nav-button'
-              buttonTextClass='nav-button-text'
-              iconClass='icon-arrow-up fas fa-chevron-up'
-            />
+            buttonLink='#intensidade'
+            buttonClass='nav-button'
+            buttonTextClass='nav-button-text'
+            iconClass='icon-arrow-up fas fa-chevron-up'
+          />
 
           <p className='your-red your-red-handwritten'>entusiasmo</p>
 
@@ -139,11 +162,11 @@ export default function Intensidade() {
           </div>
 
           <Button
-            buttonLink=''
             buttonClass='nav-button'
             buttonTextClass='nav-button-text'
             buttonText='Tutorial'
             iconClass='icon-arrow-down fas fa-chevron-down'
+            buttonOnClick={() => response()}
           />
         </div>
       </section>
