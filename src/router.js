@@ -19,7 +19,7 @@ const Routes = () => {
         <Route path ='/entusiasmo' component={Entusiasmo} exact />
         <Route path ='/intensidade' component={Intensidade} exact />
         <Route path ='/tutorial1' component={TutorialBorra} exact />
-        <Route path ='/turorial2' component={TutorialBocaPeq} exact />
+        <Route path ='/tutorial2' component={TutorialBocaPeq} exact />
         <Route path ='/tutorial3' component={TutorialCorIntensa} exact />
       </Switch>
     </BrowserRouter>
