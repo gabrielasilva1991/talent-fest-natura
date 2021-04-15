@@ -140,13 +140,13 @@ export default function Home() {
       <main>
         <section id='section-name' className='section-base centered'>
           <div className='section-container'>
-              <Button
-                buttonLink='#'
-                buttonClass='nav-button'
-                buttonTextClass='nav-button-text'
-                buttonText='Voltar'
-                iconClass='icon-arrow-up fas fa-chevron-up'
-              />
+            <Button
+              buttonLink='#'
+              buttonClass='nav-button'
+              buttonTextClass='nav-button-text'
+              buttonText='Voltar'
+              iconClass='icon-arrow-up fas fa-chevron-up'
+            />
 
             <div className='input-name-wrap'>
               <label className='default-text'>Insira seu nome</label>
@@ -158,109 +158,126 @@ export default function Home() {
               />
             </div>
 
-              <Button
-                navType='next'
-                buttonLink='#section-quiz-01'
-                buttonClass='nav-button'
-                buttonTextClass='nav-button-text'
-                buttonText='Próximo'
-                iconClass='icon-arrow-down fas fa-chevron-down'
-              />
+            <Button
+              navType='next'
+              buttonLink='#section-quiz-01'
+              buttonClass='nav-button'
+              buttonTextClass='nav-button-text'
+              buttonText='Próximo'
+              iconClass='icon-arrow-down fas fa-chevron-down'
+            />
           </div>
         </section>
 
         <section id='section-quiz-01' className='section-base centered'>
-          <p className='default-text'>1. Que tipo de vermelho mais combina com você?</p>
-          <InputRadio
-            inputClass='input-radio input-answer'
-            inputId='light'
-            inputName='type-of-red'
-            inputRequired
-            inputValue={questionOneResponseOne}
-            // inputChecked=''
-            inputOnChange={handleResponseOne}
-            labelHtmlFor='light'
-            labelClass='label-answer button-base'
-            labelText='Aberto e alegre'
-          />
-          <InputRadio
-            inputClass='input-radio input-answer'
-            inputId='purple'
-            inputName='type-of-red'
-            inputRequired
-            inputValue={questionOneResponseThree}
-            // inputChecked=''
-            inputOnChange={handleResponseThree}
-            labelHtmlFor='purple'
-            labelClass='label-answer button-base'
-            labelText='Arroxeado e vibrante'
-          />
-          <InputRadio
-            inputClass='input-radio input-answer'
-            inputId='classic'
-            inputName='type-of-red'
-            inputRequired
-            inputValue={questionOneResponseTwo}
-            // inputChecked=''
-            inputOnChange={handleResponseTwo}
-            labelHtmlFor='classic'
-            labelClass='label-answer button-base'
-            labelText='Clássico e atemporal'
-          />
-          <Button
-            buttonLink='#section-quiz-02'
-            buttonClass='nav-button'
-            buttonTextClass='nav-button-text'
-            buttonText='Próximo'
-            iconClass='icon-arrow-down fas fa-chevron-down'
-          />
+          <div className='section-container'>
+            <Button
+              buttonLink='#section-name'
+              buttonClass='nav-button'
+              buttonTextClass='nav-button-text'
+              // buttonText='Voltar'
+              iconClass='icon-arrow-up fas fa-chevron-up'
+            />
+
+            <p className='default-text'>1. Que tipo de vermelho mais combina com você?</p>
+
+            <InputRadio
+              inputClass='input-radio input-answer'
+              inputId='light'
+              inputName='type-of-red'
+              inputRequired
+              inputValue={questionOneResponseOne}
+              // inputChecked=''
+              inputOnChange={handleResponseOne}
+              labelHtmlFor='light'
+              labelClass='label-answer button-base'
+              labelText='Aberto e alegre'
+            />
+
+            <InputRadio
+              inputClass='input-radio input-answer'
+              inputId='purple'
+              inputName='type-of-red'
+              inputRequired
+              inputValue={questionOneResponseThree}
+              // inputChecked=''
+              inputOnChange={handleResponseThree}
+              labelHtmlFor='purple'
+              labelClass='label-answer button-base'
+              labelText='Arroxeado e vibrante'
+            />
+
+            <InputRadio
+              inputClass='input-radio input-answer'
+              inputId='classic'
+              inputName='type-of-red'
+              inputRequired
+              inputValue={questionOneResponseTwo}
+              // inputChecked=''
+              inputOnChange={handleResponseTwo}
+              labelHtmlFor='classic'
+              labelClass='label-answer button-base'
+              labelText='Clássico e atemporal'
+            />
+
+            <Button
+              navType='next'
+              buttonLink='#section-quiz-02'
+              buttonClass='nav-button'
+              buttonTextClass='nav-button-text'
+              // buttonText='Próximo'
+              iconClass='icon-arrow-down fas fa-chevron-down'
+            />
+          </div>
         </section>
 
         <section id='section-quiz-02' className='section-base centered'>
-          <p className='default-text'>2. Quais as cores predominantes no seu guarda-roupa?</p>
-          <InputRadio
-            inputClass='input-radio input-answer'
-            inputId='cold'
-            inputName='wardrobe-colors'
-            inputRequired
-            inputValue={questionTwoResponseTwo}
-            // inputChecked=''
-            inputOnChange={handleTwoResponse}
-            labelHtmlFor='cold'
-            labelClass='label-answer button-base'
-            labelText='Tons frios, como azuis e cinzas'
-          />
-          <InputRadio
-            inputClass='input-radio input-answer'
-            inputId='warm'
-            inputName='wardrobe-colors'
-            inputRequired
-            inputValue={questionTwoResponseOne}
-            // inputChecked=''
-            inputOnChange={handleOneResponse}
-            labelHtmlFor='warm'
-            labelClass='label-answer button-base'
-            labelText='Tons quentes, como amarelos e laranjas'
-          />
-          <InputRadio
-            inputClass='input-radio input-answer'
-            inputId='strong'
-            inputName='wardrobe-colors'
-            inputRequired
-            inputValue={questionTwoResponseThree}
-            // inputChecked=''
-            inputOnChange={handleThreeResponse}
-            labelHtmlFor='strong'
-            labelClass='label-answer button-base'
-            labelText='Não importa a cor, desde que seja forte'
-          />
-          <Button
-            buttonLink='#section-quiz-03'
-            buttonClass='nav-button'
-            buttonTextClass='nav-button-text'
-            buttonText='Próximo'
-            iconClass='icon-arrow-down fas fa-chevron-down'
-          />
+          <div className='section-container'>
+            <p className='default-text'>2. Quais as cores predominantes<br />no seu guarda-roupa?</p>
+            <InputRadio
+              inputClass='input-radio input-answer'
+              inputId='cold'
+              inputName='wardrobe-colors'
+              inputRequired
+              inputValue={questionTwoResponseTwo}
+              // inputChecked=''
+              inputOnChange={handleTwoResponse}
+              labelHtmlFor='cold'
+              labelClass='label-answer button-base'
+              labelText='Tons frios, como azuis e cinzas'
+            />
+            <InputRadio
+              inputClass='input-radio input-answer'
+              inputId='warm'
+              inputName='wardrobe-colors'
+              inputRequired
+              inputValue={questionTwoResponseOne}
+              // inputChecked=''
+              inputOnChange={handleOneResponse}
+              labelHtmlFor='warm'
+              labelClass='label-answer button-base'
+              labelText='Tons quentes, como amarelos e laranjas'
+            />
+            <InputRadio
+              inputClass='input-radio input-answer'
+              inputId='strong'
+              inputName='wardrobe-colors'
+              inputRequired
+              inputValue={questionTwoResponseThree}
+              // inputChecked=''
+              inputOnChange={handleThreeResponse}
+              labelHtmlFor='strong'
+              labelClass='label-answer button-base'
+              labelText='Não importa a cor, desde que seja forte'
+            />
+            <Button
+              buttonLink='#section-quiz-03'
+              buttonClass='nav-button'
+              buttonTextClass='nav-button-text'
+              buttonText='Próximo'
+              iconClass='icon-arrow-down fas fa-chevron-down'
+            />
+          </div>
         </section>
 
         <section id='section-quiz-03' className='section-base centered'>
