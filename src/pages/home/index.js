@@ -1,38 +1,36 @@
 import React, { useState } from 'react';
 import Button from '../../components/Button';
 import InputRadio from '../../components/InputRadio';
-// import photoExample01 from '../../img/boa-foto-01.jpg';
-// import photoExample03 from '../../img/boa-foto-03.jpg';
 import batomEnergia from '../../img/batom-energia.jpg';
 // import batomIntensidade from '../../img/batom-intensidade.jpg';
 // import batomEntusiasmo from '../../img/batom-entusiasmo.jpg';
 
 export default function Home() {
-  const questionOne = { 
-    answerOne : 'Aberto e Alegre',
-    answerTwo : 'Clássico e Atemporal',
-    answerThree : 'Arroxeado e Vibrante',
+  const questionOne = {
+    answerOne: 'Aberto e Alegre',
+    answerTwo: 'Clássico e Atemporal',
+    answerThree: 'Arroxeado e Vibrante',
   }
 
-  const questionTwo = { 
-    answerOne : ' Tons quentes como, amarelos e laranjas',
-    answerTwo : ' Tons frios, como azuis e cinzas',
-    answerThree : 'Não importa a cor, desde que seja forte',
+  const questionTwo = {
+    answerOne: ' Tons quentes como, amarelos e laranjas',
+    answerTwo: ' Tons frios, como azuis e cinzas',
+    answerThree: 'Não importa a cor, desde que seja forte',
   }
 
-  const questionThree = { 
-    answerOne : 'Vermelha',
-    answerTwo : 'Bronzeada',
+  const questionThree = {
+    answerOne: 'Vermelha',
+    answerTwo: 'Bronzeada',
   }
 
-  const questionFour = { 
-    answerOne : 'Tenho lábios finos',
-    answerTwo : 'Borra com facilidade',
-    answerThree : 'A cor não fica intensa'
+  const questionFour = {
+    answerOne: 'Tenho lábios finos',
+    answerTwo: 'Borra com facilidade',
+    answerThree: 'A cor não fica intensa'
   }
 
-  const [questionOneResponseOne, setQuestionOneResponseOne] = useState(''); 
-  const [questionOneResponseTwo, setQuestionOneResponseTwo] = useState(''); 
+  const [questionOneResponseOne, setQuestionOneResponseOne] = useState('');
+  const [questionOneResponseTwo, setQuestionOneResponseTwo] = useState('');
   const [questionOneResponseThree, setQuestionOneResponseThree] = useState('');
 
   const handleResponseOne = () => {
@@ -46,7 +44,7 @@ export default function Home() {
   };
 
   console.log(questionOneResponseTwo)
-  
+
   const handleResponseThree = () => {
     setQuestionOneResponseThree(questionOne.answerThree);
   };
@@ -56,8 +54,8 @@ export default function Home() {
 
 
 
-  const [questionTwoResponseOne, setQuestionTwoResponseOne] = useState(''); 
-  const [questionTwoResponseTwo, setQuestionTwoResponseTwo] = useState(''); 
+  const [questionTwoResponseOne, setQuestionTwoResponseOne] = useState('');
+  const [questionTwoResponseTwo, setQuestionTwoResponseTwo] = useState('');
   const [questionTwoResponseThree, setQuestionTwoResponseThree] = useState('');
 
   const handleOneResponse = () => {
@@ -71,7 +69,7 @@ export default function Home() {
   };
 
   console.log(questionTwoResponseTwo)
-  
+
   const handleThreeResponse = () => {
     setQuestionTwoResponseThree(questionTwo.answerThree);
   };
@@ -81,9 +79,9 @@ export default function Home() {
 
 
 
-  const [questionThreeResponseOne, setQuestionThreeResponseOne] = useState(''); 
-  const [questionThreeResponseTwo, setQuestionThreeResponseTwo] = useState(''); 
- 
+  const [questionThreeResponseOne, setQuestionThreeResponseOne] = useState('');
+  const [questionThreeResponseTwo, setQuestionThreeResponseTwo] = useState('');
+
   const oneHandleResponse = () => {
     setQuestionThreeResponseOne(questionThree.answerOne);
   };
@@ -98,8 +96,8 @@ export default function Home() {
 
 
 
-  const [questionFourResponseOne, setQuestionFourResponseOne] = useState(''); 
-  const [questionFourResponseTwo, setQuestionFourResponseTwo] = useState(''); 
+  const [questionFourResponseOne, setQuestionFourResponseOne] = useState('');
+  const [questionFourResponseTwo, setQuestionFourResponseTwo] = useState('');
   const [questionFourResponseThree, setQuestionFourResponseThree] = useState('');
 
   const handleOneResponseFour = () => {
@@ -113,49 +111,62 @@ export default function Home() {
   };
 
   console.log(questionFourResponseTwo)
-  
+
   const handleThreeResponseFour = () => {
     setQuestionFourResponseThree(questionFour.answerThree);
   };
 
   console.log(questionFourResponseThree)
-  
+
 
   return (
     <>
       <header className='header centered'>
-        <h1 className='find-your-red'>Descubra o<br />
-          <span className='handwritten-font'>seu vermelho</span>
-        </h1>
+        <div className='header-container'>
+          <h1>Descubra o<br />
+            <span className='handwritten-font'>seu <br />vermelho</span>
+          </h1>
 
-        <Button
-          buttonLink='#section-name'
-          buttonClass='nav-button'
-          buttonTextClass='nav-button-text'
-          buttonText='Próximo'
-          iconClass='icon-arrow-down fas fa-chevron-down'
-        />
-      </header>
-
-      <main>
-        <section id='section-name' className='section-base centered'>
-          <div>
-            <label className='default-text'>Insira seu nome</label>
-            <input
-              required
-              type='text'
-              minLength='1'
-              size='10'
-              className='input-username centered'
-            />
-          </div>
           <Button
-            buttonLink='#section-photo'
+            buttonLink='#section-name'
             buttonClass='nav-button'
             buttonTextClass='nav-button-text'
             buttonText='Próximo'
             iconClass='icon-arrow-down fas fa-chevron-down'
           />
+        </div>
+      </header>
+
+      <main>
+        <section id='section-name' className='section-base centered'>
+          <div className='section-container'>
+              <Button
+                buttonLink='#'
+                buttonClass='nav-button'
+                buttonTextClass='nav-button-text'
+                buttonText='Voltar'
+                iconClass='icon-arrow-up fas fa-chevron-up'
+              />
+
+            <div className='input-name-wrap'>
+              <label className='default-text'>Insira seu nome</label>
+              <input
+                type='text'
+                minLength='1'
+                size='12'
+                className='input-username centered'
+              />
+            </div>
+
+              <Button
+                navType='next'
+                buttonLink='#section-quiz-01'
+                buttonClass='nav-button'
+                buttonTextClass='nav-button-text'
+                buttonText='Próximo'
+                iconClass='icon-arrow-down fas fa-chevron-down'
+              />
+          </div>
         </section>
 
         <section id='section-quiz-01' className='section-base centered'>

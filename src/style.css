@@ -66,21 +66,29 @@ input {
 /* HEADER */
 .header {
   height: 100vh;
-  padding: 10vh 0;
+  padding: 5vh 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: #881212;
+  background-image: url(./img/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: soft-light;
+}
+
+.header-container {
+  height: 65vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 
-.find-your-red {
-  margin-top: 10vh;
-}
-
 .handwritten-font {
   font-family: "Meddon";
   font-size: 3rem;
-  line-height: 4.3rem;
+  line-height: 3.8rem;
 }
 
 .nav-button {
@@ -88,29 +96,48 @@ input {
 }
 
 .nav-button-text {
-  margin-bottom: 0.5rem;
+  margin: 0.2rem 0;
   text-transform: uppercase;
   font-size: 0.75rem;
   letter-spacing: 0.08rem;
 }
 
-.icon-arrow-down {
-  font-size: 3rem;
+.icon-arrow-down, .icon-arrow-up {
+  font-size: 2rem;
 }
 
 /* ---- SECTIONS ---- */
 /* GENERAL */
 .section-base {
   height: 100vh;
-  padding: 10vh 4vw;
+  padding: 5vh 4vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.section-container {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 
+.nav-buttons-wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 50vw;
+}
+
 /* GET USER NAME */
+.input-name-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
 .input-username {
+  margin-top: 1.5rem;
   border-bottom: solid 1px #f2e6d0;
   background: none;
   font-weight: bold;
@@ -125,8 +152,6 @@ input {
   width: 40vw;
   height: auto;
 }
-
-/* UPLOAD PHOTO */
 
 
 /* QUIZ */

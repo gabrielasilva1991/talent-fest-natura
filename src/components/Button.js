@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default function Button({
+  navType,
   buttonLink,
   buttonType,
   buttonClass,
@@ -16,8 +17,17 @@ export default function Button({
         className={buttonClass}
         onClick={buttonOnClick}
       >
-        <p className={buttonTextClass}>{buttonText}</p>
-        <i className={iconClass}></i>
+        {navType === 'next' ? (
+          <>
+            <p className={buttonTextClass}>{buttonText}</p>
+            <i className={iconClass}></i>
+          </>
+        ) : (
+          <>
+            <i className={iconClass}></i>
+            <p className={buttonTextClass}>{buttonText}</p>
+          </>
+        )}
       </button>
     </a>
   );
