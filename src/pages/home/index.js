@@ -65,16 +65,19 @@ export default function Home() {
     setAllResponses([...allResponses, Number(questionThree.answerTwo)]);
   };
 
-  const handleOneResponseFour = () => {
+  const handleOneResponseFour = (e) => {
     setAllResponses([...allResponses, Number(questionFour.answerOne)]);
+    localStorage.setItem('responseOne', e.target.value);
   };
 
-  const handleTwoResponseFour = () => {
+  const handleTwoResponseFour = (e) => {
     setAllResponses([...allResponses, Number(questionFour.answerTwo)]);
+    localStorage.setItem('responseTwo', e.target.value)
   };
 
-  const handleThreeResponseFour = () => {
+  const handleThreeResponseFour = (e) => {
     setAllResponses([...allResponses, Number(questionFour.answerThree)]);
+    localStorage.setItem('responseThree', e.target.value)
   };
 
   useEffect(() => {
@@ -479,14 +482,22 @@ export default function Home() {
             </article>
             <img src={redMarble} className='red-marble-img' alt='Mármore vermelho'></img>
 
-            <Button
+            <button
+              type='text'
+              className='nav-button red-color'
+              onClick={() => result()}
+            >
+              <p className='nav-button-text red-color'>Descubra</p>
+              <i className='icon-arrow-down fas fa-chevron-down'></i>
+            </button>
+            {/* <Button
               navType='next'
               buttonClass='nav-button red-color'
               buttonTextClass='nav-button-text'
               buttonText='Descubra'
               iconClass='icon-arrow-down fas fa-chevron-down'
               buttonOnClick={() => result()}
-            />
+            /> */}
           </div>
         </section>
       </main>
