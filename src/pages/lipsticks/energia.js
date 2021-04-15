@@ -13,7 +13,7 @@ export default function Energia() {
       <section id='batom' className='section-base section-lipstick centered'>
         <div className='section-container'>
           <div className='your-red'>
-            <p><span className='bold'>Lilian, </span>
+            <p><span className='bold'>{localStorage.getItem('userClient')}, </span>
               <br />seu vermelho é o </p>
             <p className='your-red-handwritten'>energia</p>
           </div>

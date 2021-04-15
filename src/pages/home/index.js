@@ -32,13 +32,10 @@ export default function Home() {
 
   const [allResponses, setAllResponses] = useState('');
   const [total, setTotal] = useState(0);
-  const [userName, setUserName] = useState('');
 
   const handleResponseOne = () => {
     setAllResponses([...allResponses, Number(questionOne.answerOne)]);
   };
-
-  console.log(allResponses)
 
   const handleResponseTwo = () => {
     setAllResponses([...allResponses, Number(questionOne.answerTwo)]);
@@ -137,7 +134,7 @@ export default function Home() {
                 size='12'
                 className='input-username centered'
                 onChange={(event) => {
-                  setUserName(event.target.value)
+                  localStorage.setItem('userClient', event.target.value)
                 }}
               />
             </div>
