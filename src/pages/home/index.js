@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from '../../components/Button';
 import InputRadio from '../../components/InputRadio';
 // import photoExample01 from '../../img/boa-foto-01.jpg';
@@ -6,8 +6,10 @@ import InputRadio from '../../components/InputRadio';
 import batomEnergia from '../../img/batom-energia.jpg';
 // import batomIntensidade from '../../img/batom-intensidade.jpg';
 // import batomEntusiasmo from '../../img/batom-entusiasmo.jpg';
+import { useHistory } from "react-router";
 
 export default function Home() {
+  const history = useHistory()
   const questionOne = { 
     answerOne : '5',
     answerTwo : '10',
@@ -32,6 +34,8 @@ export default function Home() {
   }
 
   const [allResponses, setAllResponses] = useState('');
+  const [total, setTotal] = useState(0);
+  const [userName, setUserName] = useState("");
 
   const handleResponseOne = () => {
     setAllResponses([...allResponses, Number(questionOne.answerOne)]);
@@ -82,19 +86,40 @@ export default function Home() {
     setAllResponses([...allResponses, Number(questionFour.answerThree)]);
   };
 
+  useEffect(() => {
+    if(!allResponses) return
+         setTotal(() => {
+             const newTotal = allResponses.reduce((accumulator, current) => {
+                return Number(accumulator) + Number(current);
+             }, 0);
+ 
+             return newTotal;
+         });
+     }, [allResponses]);
 
-  function Somar(allResponses, number) {
-    var total = 0;
-    for (var i = 0; i < allResponses.length; i++) {
-        if (allResponses[i] >= number) {
-            total += allResponses[i];
-        }
-    }
-    return total;
-  }
-  console.log(Somar(allResponses, 2));
-
+  // function Somar(allResponses, number) {
+  //   let totalValue = 0;
+  //   for (let i = 0; i < allResponses.length; i++) {
+  //       if (allResponses[i] >= number) {
+  //           totalValue += allResponses[i];
+  //       }
+  //   }
+  //   console.log(totalValue)
+  //   setTotal(totalValue);
+  // }
   
+  // console.log(Somar(allResponses, 2));
+  
+  function result() {
+    if(total >= 20 && total <= 35){
+      history.push('/energia')
+    }else if(total >= 36 && total <= 45){
+      history.push('/entusiasmo')
+    }else if(total >= 46){
+      history.push('/intensidade')
+    }  
+  }
+
   return (
     <>
       <header className='header centered'>
@@ -115,12 +140,16 @@ export default function Home() {
         <section id='section-name' className='section-base centered'>
           <div>
             <label className='default-text'>Insira seu nome</label>
-            <input
+            <input 
               required
               type='text'
               minLength='1'
               size='10'
               className='input-username centered'
+              value={userName}
+              onChange={(event) => {
+                setUserName(event.target.value)
+              }}
             />
           </div>
           <Button
@@ -321,12 +350,13 @@ export default function Home() {
             buttonTextClass='nav-button-text'
             buttonText='Descubra o  seu vermelho'
             iconClass='icon-arrow-down fas fa-chevron-down'
+            buttonOnClick={() => result()}
           />
         </section>
 
         <section id='section-lipstick' className='section-base section-lipstick centered'>
           <div className='your-red'>
-            <p className=''>Cliente,<br />seu vermelho é o </p>
+            <p className=''>{userName},<br />seu vermelho é o </p>
             <p className='your-red-handwritten'>energia</p>
           </div>
           <img className='lipstick-img' src={batomEnergia} alt='Batom Energia'></img>
