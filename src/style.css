@@ -14,6 +14,7 @@ html {
   scroll-behavior: smooth;
   font-family: "Yantramanav", sans-serif;
   font-weight: 300;
+  overflow-x: hidden;
 }
 
 body {
@@ -66,7 +67,7 @@ input {
 /* HEADER */
 .header {
   height: 100vh;
-  padding: 3.5vh 0;
+  padding: 7vh 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -98,7 +99,7 @@ input {
 .nav-button-text {
   margin: 0.2rem 0;
   text-transform: uppercase;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   letter-spacing: 0.08rem;
 }
 
@@ -187,6 +188,16 @@ input {
 .marrom-medio { background-color: #B87145 }
 .marrom-escuro { background-color: #815530 }
 
+@media (min-width: 900px) {
+  .foundations-wrap {
+    flex-direction: row;
+  }
+
+  .button-skin {
+    margin: 0 1rem;
+  }
+}
+
 
 /* MANIFESTO */
 .section-manifesto {
@@ -217,42 +228,76 @@ input {
 
 /* LIPSTICK */
 .section-lipstick {
-  padding: 5vh;
+  padding: 5vh 0;
   background-color: #B12E24;
 }
 
-.lipstick-img {
-  position: relative;
-  left: -15vw;
-  width: 17rem;
-  height: auto;
-  border: solid 2px #f2e6d0;
-  border-radius: 50%;
-  object-fit: none;
-  object-position: center 10%;
-}
-
-.button-buy {
-  background-color: #f2e6d0;
-  width: 4.5rem;
-  height: 4.5rem;
-  border-radius: 50%;
-}
-
-.button-buy-text {
-  color: #881212;
-  text-transform: uppercase;
-}
-
 .your-red {
-  font-weight: bold;
+  font-weight: 300;
   font-size: 1.5rem;
   color: #f1ede5
 }
 
 .your-red-handwritten {
   font-family: 'Meddon';
-  font-size: 2.4rem;
+  font-size: 2.5rem;
   font-weight: 300;
   line-height: 1.8rem;
+}
+
+.lipstick-wrap, .nail-polish-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.lipstick-img {
+  width: 60vw;
+  height: 13.5rem;
+  object-fit: none;
+  object-position: 35% 2%;
+}
+
+.nail-polish-img {
+  width: 60vw;
+  height: 8.5rem;
+  object-fit: none;
+  object-position: 50% 75%;
+}
+
+.lipstick-info {
+  position: relative;
+  left: -2rem;
+  width: 60vw;
+  background-color: #fff;
+  padding: 0.7rem;
+  text-align: left;
+  color: #000;
+}
+
+.lipstick-title {
+  font-weight: bold;
+}
+
+.lipstick-description {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.button-buy {
+  display: inline-block;
+  background-color: #881212;
+  border: solid 1px #881212;
+  padding: 0.3rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #f2e6d0;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+}
+
+.button-buy:hover {
+  background-color: #fff;
+  color: #881212;
+  transition: 0.3s ease-in-out;
 }

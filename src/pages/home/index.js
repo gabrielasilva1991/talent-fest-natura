@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router';
 import Button from '../../components/Button';
 import InputRadio from '../../components/InputRadio';
 import redMarble from '../../img/red-marble.jpg';
-import batomEnergia from '../../img/batom-energia.jpg';
-// import batomIntensidade from '../../img/batom-intensidade.jpg';
-// import batomEntusiasmo from '../../img/batom-entusiasmo.jpg';
 
 export default function Home() {
+  const history = useHistory()
+
   const questionOne = {
     answerOne: '5',
     answerTwo: '10',
@@ -31,6 +31,8 @@ export default function Home() {
   }
 
   const [allResponses, setAllResponses] = useState('');
+  const [total, setTotal] = useState(0);
+  const [userName, setUserName] = useState('');
 
   const handleResponseOne = () => {
     setAllResponses([...allResponses, Number(questionOne.answerOne)]);
@@ -78,17 +80,26 @@ export default function Home() {
     setAllResponses([...allResponses, Number(questionFour.answerThree)]);
   };
 
-  function Somar(allResponses, number) {
-    var total = 0;
-    for (var i = 0; i < allResponses.length; i++) {
-      if (allResponses[i] >= number) {
-        total += allResponses[i];
-      }
-    }
-    return total;
-  }
-  console.log(Somar(allResponses, 2));
+  useEffect(() => {
+    if (!allResponses) return
+    setTotal(() => {
+      const newTotal = allResponses.reduce((accumulator, current) => {
+        return Number(accumulator) + Number(current);
+      }, 0);
 
+      return newTotal;
+    });
+  }, [allResponses]);
+
+  function result() {
+    if (total >= 20 && total <= 35) {
+      history.push('/energia')
+    } else if (total >= 36 && total <= 45) {
+      history.push('/entusiasmo')
+    } else if (total >= 46) {
+      history.push('/intensidade')
+    }
+  }
 
   return (
     <>
@@ -125,6 +136,9 @@ export default function Home() {
                 minLength='1'
                 size='12'
                 className='input-username centered'
+                onChange={(event) => {
+                  setUserName(event.target.value)
+                }}
               />
             </div>
 
@@ -207,7 +221,7 @@ export default function Home() {
               iconClass='icon-arrow-up fas fa-chevron-up'
             />
 
-            <p className='default-text'>2. Quais as cores predominantes<br />no seu guarda-roupa?</p>
+            <p className='default-text'>2. Quais as cores predominantes no seu guarda-roupa?</p>
 
             <InputRadio
               inputClass='input-radio input-answer'
@@ -266,7 +280,7 @@ export default function Home() {
               iconClass='icon-arrow-up fas fa-chevron-up'
             />
 
-            <p className='default-text'>3. Quando você toma sol, <br />sua pele fica</p>
+            <p className='default-text'>3. Quando você toma sol, sua pele fica</p>
 
             <InputRadio
               inputClass='input-radio input-answer'
@@ -481,36 +495,13 @@ export default function Home() {
 
             <Button
               navType='next'
-              buttonLink='#section-lipstick'
               buttonClass='nav-button red-color'
               buttonTextClass='nav-button-text'
               buttonText='Descubra'
               iconClass='icon-arrow-down fas fa-chevron-down'
+              buttonOnClick={() => result()}
             />
           </div>
-        </section>
-
-        <section id='lipstick' className='section-base section-lipstick centered'>
-          <div className='your-red'>
-            <p className=''>Cliente,<br />seu vermelho é o </p>
-            <p className='your-red-handwritten'>energia</p>
-          </div>
-          <img className='lipstick-img' src={batomEnergia} alt='Batom Energia'></img>
-
-          <Button
-            buttonLink='https://www.natura.com.br/p/batom-marmorizado-natura-una-3,5g/7096?color=Vermelho%20Energia'
-            buttonClass='button-buy'
-            buttonTextClass='button-buy-text'
-            buttonText='Compre agora'
-          />
-
-          <Button
-            buttonLink='#section-lipstick'
-            buttonClass='nav-button'
-            buttonTextClass='nav-button-text'
-            buttonText='Veja o tutorial'
-            iconClass='icon-arrow-down fas fa-chevron-down'
-          />
         </section>
       </main>
     </>
