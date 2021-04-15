@@ -228,11 +228,12 @@ input {
 
 /* LIPSTICK */
 .section-lipstick {
-  padding: 5vh 0;
+  padding: 3vh 0;
   background-color: #B12E24;
 }
 
 .your-red {
+  margin-bottom: 1.5rem;
   font-weight: 300;
   font-size: 1.5rem;
   color: #f1ede5
@@ -245,9 +246,14 @@ input {
   line-height: 1.8rem;
 }
 
+.products-container {
+  max-width: 600px;
+}
+
 .lipstick-wrap, .nail-polish-wrap {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
 }
 
@@ -275,13 +281,28 @@ input {
   color: #000;
 }
 
-.lipstick-title {
-  font-weight: bold;
+.nail-polish-info {
+  position: relative;
+  left: 2rem;
+  width: 60vw;
+  background-color: #fff;
+  padding: 0.7rem;
+  text-align: right;
+  color: #000;
 }
 
 .lipstick-description {
   margin: 0.5rem 0;
   font-size: 0.9rem;
+}
+
+.nail-polish-description {
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.9rem;
+  letter-spacing: 0.03rem;
+  color: #881212;
 }
 
 .button-buy {
