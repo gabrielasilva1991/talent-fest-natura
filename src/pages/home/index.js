@@ -166,7 +166,6 @@ export default function Home() {
               inputName='type-of-red'
               inputRequired
               inputValue={allResponses}
-              // inputChecked=''
               inputOnChange={handleResponseOne}
               labelHtmlFor='light'
               labelClass='label-answer button-base'
@@ -179,7 +178,6 @@ export default function Home() {
               inputName='type-of-red'
               inputRequired
               inputValue={allResponses}
-              // inputChecked=''
               inputOnChange={handleResponseThree}
               labelHtmlFor='purple'
               labelClass='label-answer button-base'
@@ -192,7 +190,6 @@ export default function Home() {
               inputName='type-of-red'
               inputRequired
               inputValue={allResponses}
-              // inputChecked=''
               inputOnChange={handleResponseTwo}
               labelHtmlFor='classic'
               labelClass='label-answer button-base'
@@ -226,7 +223,6 @@ export default function Home() {
               inputName='wardrobe-colors'
               inputRequired
               inputValue={allResponses}
-              // inputChecked=''
               inputOnChange={handleTwoResponse}
               labelHtmlFor='cold'
               labelClass='label-answer button-base'
@@ -239,7 +235,6 @@ export default function Home() {
               inputName='wardrobe-colors'
               inputRequired
               inputValue={allResponses}
-              // inputChecked=''
               inputOnChange={handleOneResponse}
               labelHtmlFor='warm'
               labelClass='label-answer button-base'
@@ -252,7 +247,6 @@ export default function Home() {
               inputName='wardrobe-colors'
               inputRequired
               inputValue={allResponses}
-              // inputChecked=''
               inputOnChange={handleThreeResponse}
               labelHtmlFor='strong'
               labelClass='label-answer button-base'
@@ -285,7 +279,6 @@ export default function Home() {
               inputName='skin-sensitivity'
               inputRequired
               inputValue={allResponses}
-              // inputChecked=''
               inputOnChange={oneHandleResponse}
               labelHtmlFor='burned'
               labelClass='label-answer button-base'
@@ -298,7 +291,6 @@ export default function Home() {
               inputName='skin-sensitivity'
               inputRequired
               inputValue={allResponses}
-              // inputChecked=''
               inputOnChange={twoHandleResponse}
               labelHtmlFor='bronzed'
               labelClass='label-answer button-base'
@@ -330,7 +322,6 @@ export default function Home() {
               inputName='makeup-difficulty'
               inputRequired
               inputValue={allResponses}
-              // inputChecked=''
               inputOnChange={handleOneResponseFour}
               labelHtmlFor='thin-lips'
               labelClass='label-answer button-base'
@@ -343,7 +334,6 @@ export default function Home() {
               inputName='makeup-difficulty'
               inputRequired
               inputValue={allResponses}
-              // inputChecked=''
               inputOnChange={handleTwoResponseFour}
               labelHtmlFor='smudged-lipstick'
               labelClass='label-answer button-base'
@@ -356,7 +346,6 @@ export default function Home() {
               inputName='makeup-difficulty'
               inputRequired
               inputValue={allResponses}
-              // inputChecked=''
               inputOnChange={handleThreeResponseFour}
               labelHtmlFor='mild-color'
               labelClass='label-answer button-base'

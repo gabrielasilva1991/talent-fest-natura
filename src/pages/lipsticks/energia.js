@@ -10,7 +10,7 @@ import esmalteSuaVerdade from '../../img/esmalte-sua-verdade.jpg';
 export default function Energia() {
   return (
     <>
-      <section id='batom' className='section-base section-lipstick centered'>
+      <section id='#' className='section-base section-lipstick centered'>
         <div className='section-container'>
           <div className='your-red'>
             <p><span className='bold'>{localStorage.getItem('userClient')}, </span>
@@ -57,7 +57,7 @@ export default function Energia() {
       <section id='intensidade' className='section-base section-lipstick centered'>
         <div className='section-container'>
           <Button
-              buttonLink='#batom'
+              buttonLink='#'
               buttonClass='nav-button'
               buttonTextClass='nav-button-text'
               iconClass='icon-arrow-up fas fa-chevron-up'
@@ -120,7 +120,7 @@ export default function Energia() {
                 <p className='lipstick-description'>Mistura entre cor e balm. Vegano. Acabamento cremoso. Alta pigmentação e hidratação por 24 horas.</p>
                 <a
                   className='button-buy' target='_blank' rel='noreferrer'
-                  href='https://www.natura.com.br/p/batom-marmorizado-natura-una-3,5g/7096?color=Vermelho%20Entusiasmo'
+                  href='https://www.natura.com.br/p/batom-marmorizado-natura-una-3,5g/7096?color=Vinho%20Entusiasmo'
                 >Compre agora</a>
               </article>
             </div>
@@ -139,7 +139,7 @@ export default function Energia() {
           </div>
 
           <Button
-            buttonLink='#entusiasmo'
+            buttonLink=''
             buttonClass='nav-button'
             buttonTextClass='nav-button-text'
             buttonText='Tutorial'
