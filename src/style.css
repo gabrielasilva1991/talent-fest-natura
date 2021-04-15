@@ -40,7 +40,7 @@ input {
 
 .button-base {
   width: 15rem;
-  padding: 1rem 0.3rem;
+  padding: 0.8rem 1rem;
   background-color: #f2e6d0;
   color: #881212;
   font-size: 0.95rem;
@@ -66,7 +66,7 @@ input {
 /* HEADER */
 .header {
   height: 100vh;
-  padding: 5vh 0;
+  padding: 3.5vh 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -110,7 +110,7 @@ input {
 /* GENERAL */
 .section-base {
   height: 100vh;
-  padding: 5vh 4vw;
+  padding: 3.5vh 4vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -162,6 +162,32 @@ input {
 }
 
 
+/* FOUNDATION */
+.foundations-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-skin-answer:checked + .label-skin-answer {
+  border: solid 2px #440909;
+}
+
+.button-skin {
+  border: solid 2px #f2e6d0;
+  border-radius: 50%;
+  margin: 0.4rem 0;
+  padding: 1rem;
+}
+
+.bege-translucido { background-color: #D5B8A1; }
+.bege-rosado { background-color: #DF9E74 }
+.bege-medio { background-color: #CA966D }
+.bege-castanho { background-color: #B97F57 }
+.marrom-claro { background-color: #AD6E42 }
+.marrom-medio { background-color: #B87145 }
+.marrom-escuro { background-color: #815530 }
+
+
 /* MANIFESTO */
 .section-manifesto {
   background-color: #f1ede5;
@@ -169,8 +195,23 @@ input {
 
 .manifesto-text {
   font-size: 1.4rem;
-  font-weight: bold;
+  font-weight: 300;
   color: #AD1F23;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.manifesto-your-red {
+  font-family: 'Meddon';
+  font-weight: 300;
+  font-size: 2.2rem;
+}
+
+.red-marble-img {
+  width: 90vw;
+  height: auto;
 }
 
 
