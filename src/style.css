@@ -11,10 +11,11 @@
 
 /* GENERAL STYLING */
 html {
+  overflow-x: hidden;
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
   font-family: "Yantramanav", sans-serif;
   font-weight: 300;
-  overflow-x: hidden;
 }
 
 body {
@@ -37,6 +38,10 @@ input {
   border: none;
   color: #f2e6d0;
   cursor: pointer;
+}
+
+header, section {
+  scroll-snap-align: center;
 }
 
 .button-base {
@@ -79,10 +84,10 @@ input {
 }
 
 .header-container {
-  height: 65vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
 
